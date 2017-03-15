@@ -19,11 +19,11 @@ api使用node.js进行二次封装解决跨域问题, node使用[Heroku](https:/
 
 ## 预览
 
-![预览]()
+![预览](https://github.com/walleeeee/daily-zhihu/edit/master/)
 
 ## Demo
 
-建议在手机或F12手机模式下浏览[Demo](https://walleeeee.github.io/daily-zhihu/)
+建议在手机或F12手机模式下浏览[Demo](https://walleeeee.github.io/daily-zhihu/static/demo.jpg)
 
 ## 运行方法
 
