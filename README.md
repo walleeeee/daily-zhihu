@@ -15,7 +15,7 @@ api来自知乎( [知乎Zhihu](http://www.zhihu.com/) ), 项目中所有内容�
 ``` bash
 <meta name="referrer" content="never">
 ```
-- 欢迎issue, fork, star
+- 欢迎issue、fork、star
 
 ## 预览
 
