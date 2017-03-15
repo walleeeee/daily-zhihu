@@ -1,6 +1,5 @@
 <template>
 <div>
-	<!-- <mu-refresh-control :refreshing="refreshing" :trigger="scroller" @refresh="refresh" /> -->
 	<m-swipe swipeid="swipe" ref="swiper" :autoplay="3000" effect="slide">
 		<div @click="go(top.id)" v-for="top in tops" class="swiper-slide" slot="swiper-con">
 			<img :src="top.image">
@@ -208,6 +207,7 @@ export default {
         box-shadow: 0 3px 10px 0 rgba(91,115,146,0.15);
     }
     &-con {
+	cursor: pointer;
         display: flex;
         padding: 0.3rem;
         margin-bottom: 0.4rem;
