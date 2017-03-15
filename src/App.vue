@@ -196,6 +196,7 @@ export default {
         }
     }
     li {
+    	cursor: pointer;
         font-size: 0.43rem;
         list-style: none;
         color: #fff;
