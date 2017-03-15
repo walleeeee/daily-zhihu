@@ -257,5 +257,8 @@ export default {
 		left: 50%;
 		transform: translate(-50%,0);
 	}
+	.aside ul{
+		width: 350px;
+	}
 }
 </style>
