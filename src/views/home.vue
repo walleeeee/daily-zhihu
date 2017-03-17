@@ -99,16 +99,6 @@ export default {
 				vue.getList();
 			}, 500)
 		},
-		refresh() {
-			this.refreshing = true
-			this.list = [];
-			this.tops = [];
-			this.count = 1;
-			setTimeout(() => {
-				this.getList(1);
-				this.refreshing = false
-			}, 1000)
-		},
 		GetDate(Count) {
 			var dd = new Date();
 			dd.setDate(dd.getDate() + Count); //获取AddDayCount天后的日期
