@@ -14,7 +14,7 @@ export default {
 		$bindScroll() {
 			if ( !this.scroller ) return
 			this._handleScroll = ( e ) => {
-				if ( this.onScroll ) this.onScroll()
+				if ( this.onScroll ) this.onScroll() //滑动屏幕回调函数
 			}
 			this.scroller.addEventListener( 'scroll', this._handleScroll )
 		},

@@ -33,6 +33,7 @@ export default {
 			const scrollHeight = isWindow ? document.documentElement.scrollHeight || document.body.scrollHeight : scroller.scrollHeight
 			let h = scrollHeight - scrollTop - 5
 			let sh = isWindow ? window.innerHeight : scroller.offsetHeight
+			//滑动距离大于内容高度触发加载事件
 			if (h <= sh) {
 				this.$emit('load')
 			}

@@ -19,7 +19,9 @@
 		<span class="middle"></span>
 		<span class="right"></span>
 	</div>
+	<!-- 滑动加载更多组件 -->
 	<infinite-scroll :scroller="scroller" :loading="loading" @load="loadMore" />
+	<!-- 回到顶部组件 -->
 	<back-scroll :scroller="scroller" :flag="circle"></back-scroll>
 </div>
 </template>

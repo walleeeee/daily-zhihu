@@ -169,6 +169,7 @@ img {
             }
         }
         .content-image {
+        	width:inherit;
             max-width: 100%;
         }
         .view-more {

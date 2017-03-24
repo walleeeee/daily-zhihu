@@ -19,7 +19,7 @@ const store = new Vuex.Store( {
 	},
 	mutations: {
 		add: ( state, n ) => state.num = n,
-		back( state, n ) {
+		back( state, n ) { //列表、返回按钮切换
 			if ( n ) {
 				state.drawer = false
 			} else {
