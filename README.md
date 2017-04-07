@@ -35,12 +35,12 @@ npm run dev
 ## Tip
 
 ``` bash
-
+This relative module was not found:
 ./views/con in ./src/router.js
 
 ```
 
-好多同学运行项目报如上错误，应该是解压的时候出错导致con.vue文件缺失，请在src/views目录下新建一个 con.vue，然后去网页端拷贝一下con.vue的代码就好了
+好多同学运行项目报如上错误，应该是解压的时候出错导致con.vue文件缺失，请在src/views目录下新建一个con.vue，然后去网页端拷贝一下con.vue的代码就好了
 
 
 ## License
