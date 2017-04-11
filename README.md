@@ -12,9 +12,9 @@ api来自知乎( [知乎Zhihu](http://www.zhihu.com/) ), 项目中所有内容�
 
 - 图片盗链问题使用以下meta标签解决
 
-``` bash
-<meta name="referrer" content="never">
-```
+  ``` bash
+  <meta name="referrer" content="never">
+  ```
 - 欢迎issue、fork、star😁
 
 ## 预览
@@ -32,6 +32,16 @@ npm install
 npm run dev
 
 ```
+## Tip
+
+``` bash
+This relative module was not found:
+./views/con in ./src/router.js
+
+```
+
+好多同学运行项目报如上错误，应该是解压的时候出错导致con.vue文件缺失，请在src/views目录下新建一个con.vue，然后去网页端拷贝一下con.vue的代码就好了😎
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
