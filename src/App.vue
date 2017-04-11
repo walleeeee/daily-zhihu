@@ -16,7 +16,7 @@
 			</li>
 			<li @click="jump()">
 				<span>项目地址</span>
-				<i class="iconfont icon-github"/>
+				<i class="iconfont icon-github" />
 			</li>
 		</ul>
 		<div class="cover" @touchmove="prevent"></div>
@@ -61,7 +61,7 @@ export default {
 	},
 	watch: {
 		'$route' (to, from) {
-			this.transitionName = to.path != "/con" ? 'slide-right' : 'slide-left';
+			this.transitionName = to.path != "/article" ? 'slide-right' : 'slide-left';
 		}
 	},
 	methods: {
@@ -100,14 +100,14 @@ export default {
 			event.preventDefault()
 			event.stopPropagation()
 		},
-		jump(){
+		jump() {
 			window.open("https://github.com/walleeeee/daily-zhihu");
 		},
 		top() {
 			let vue = this;
 			let dom = document.querySelector('.app-view');
 			let height = dom.scrollTop;
-			let scrollTop = parseInt(height/50);
+			let scrollTop = parseInt(height / 50);
 			let time = setInterval(function() {
 				height -= scrollTop;
 				if (height <= 0) {
@@ -163,10 +163,10 @@ export default {
 }
 .aside {
     z-index: 11;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     position: fixed;
     visibility: hidden;
     &::-webkit-scrollbar {
@@ -196,7 +196,7 @@ export default {
         }
     }
     li {
-    	cursor: pointer;
+        cursor: pointer;
         font-size: 0.43rem;
         list-style: none;
         color: #fff;
@@ -252,14 +252,14 @@ export default {
         position: absolute;
     }
 }
-@media screen and (min-width: 640px){
-	.app-view{
-		width: 640px;
-		left: 50%;
-		transform: translate(-50%,0);
-	}
-	.aside ul{
-		width: 350px;
-	}
+@media screen and (min-width: 640px) {
+    .app-view {
+        width: 640px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    .aside ul {
+        width: 350px;
+    }
 }
 </style>

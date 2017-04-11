@@ -57,7 +57,7 @@ export default {
 	methods: {
 		go(id) {
 			this.$router.push({
-				path: "con",
+				path: "article",
 				query: {
 					id: id
 				}

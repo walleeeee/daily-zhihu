@@ -45,7 +45,7 @@ new Vue( {
 let indexScrollTop = 0;
 let dom = document.querySelector( '.app-view' );
 router.beforeEach( ( to, from, next ) => {
-	if ( to.path == '/con' ) {
+	if ( to.path == '/article' ) {
 		dom = document.querySelector( '.app-view' );
 		indexScrollTop = dom.scrollTop;
 		store.commit( 'back' );
@@ -56,7 +56,7 @@ router.beforeEach( ( to, from, next ) => {
 	next()
 } )
 router.afterEach( ( to, from, next ) => {
-	if ( to.path == '/con' ) {
+	if ( to.path == '/article' ) {
 		dom.scrollTop = 0;
 	} else {
 		Vue.nextTick( () => {

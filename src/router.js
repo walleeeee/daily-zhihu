@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from './views/home'
-import con from './views/con'
+import article from './views/article'
 import theme from './views/theme'
 Vue.use( Router )
 const router = new Router( {
@@ -13,9 +13,9 @@ const router = new Router( {
 			name: 'home'
 		},
 		{
-			path: '/con',
-			component: con,
-			name: 'con'
+			path: '/article',
+			component: article,
+			name: 'article'
 		},
 		{
 			path: '/theme',
