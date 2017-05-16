@@ -40,7 +40,7 @@ This relative module was not found:
 
 ```
 
-好多同学运行项目报如上错误，应该是 windows 系统不允许创建名称为 con 的文件解压错误所致，现在 con 文件已经修改为 article ，window下解压运行不会再报错了😎
+好多同学运行项目报如上错误，应该是 windows 系统不允许创建名称为 con 的文件解压错误所致，现在 con 文件已经修改为 article ，windows下解压运行不会再报错了😎
 
 ## License
 
