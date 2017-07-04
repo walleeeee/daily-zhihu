@@ -22,17 +22,24 @@ import {
 export default {
 	computed: {
 		...mapState({
-			circle: state => state.circleFlag
+			circle: state => state.circleFlag,
+			article: state => state.article
 		})
 	},
 	mounted: function() {
 		this.scroller = this.$el;
 	},
 	activated: function() {
-		let vue = this;
-		api.getNewsById(this.$route.query.id).then(function(data) {
-			vue.data = data.data;
-		});
+		let vue = this,
+			id = this.$route.query.id;
+		if(this.article.hasOwnProperty(id)){
+			this.data = this.article[id];
+		}else{
+			api.getNewsById(id).then(function(data) {
+				vue.article[id] = data.data;
+				vue.data = data.data;
+			});
+		}
 	},
 	deactivated: function() {
 		this.data = "";

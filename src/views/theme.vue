@@ -33,15 +33,13 @@ export default {
 	computed: {
 		...mapState({
 			flag: state => state.num,
-			circle: state => state.circleFlag
+			circle: state => state.circleFlag,
+			theme: state => state.theme
 		})
 	},
 	mounted: function() {
-		this.getList();
 		this.scroller = this.$el;
-	},
-	activated: function() {
-		let vue = this;
+		this.$store.commit('add', this.$route.query.id);
 	},
 	data() {
 		return {
@@ -64,13 +62,19 @@ export default {
 			});
 		},
 		getList() {
-			let vue = this;
-			this.list = "";
-			api.getTopicsById(this.$route.query.id).then(function(data) {
-				vue.list = data.data;
-				let dom = document.querySelector('.app-view');
-				dom.scrollTop = 0;
-			})
+			let vue = this,
+				id = this.$route.query.id;
+			this.list = '';
+			let dom = document.querySelector('.app-view');
+			dom.scrollTop = 0;
+			if(this.theme.hasOwnProperty(id)){
+				this.list = this.theme[id];
+			}else{
+				api.getTopicsById(id).then(function(data) {
+					vue.theme[id] = data.data;
+					vue.list = data.data;
+				});
+			}
 		}
 	}
 }

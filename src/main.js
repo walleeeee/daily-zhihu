@@ -15,7 +15,10 @@ const store = new Vuex.Store( {
 	state: {
 		num: 1,
 		drawer: false,
-		circleFlag: false
+		circleFlag: false,
+		theme:{},
+		article:{},
+		before:''
 	},
 	mutations: {
 		add: ( state, n ) => state.num = n,
@@ -60,6 +63,9 @@ router.afterEach( ( to, from, next ) => {
 		dom.scrollTop = 0;
 	} else {
 		Vue.nextTick( () => {
+			if(to.path=='/theme'){
+				store.commit( 'add', location.href.split('=')[1] );
+			}
 			dom.scrollTop = indexScrollTop;
 		} );
 	}
