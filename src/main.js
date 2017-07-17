@@ -43,7 +43,7 @@ new Vue( {
 	router,
 	store,
 	template: '<App/>',
-	...App
+	components: { App }
 } )
 let indexScrollTop = 0;
 let dom = document.querySelector( '.app-view' );

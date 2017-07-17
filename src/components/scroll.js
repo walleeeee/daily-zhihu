@@ -2,9 +2,7 @@ export default {
 	props: {
 		scroller: {
 			type: [ HTMLDocument, Element, Window ],
-			default () {
-				return window
-			}
+			default: window
 		}
 	},
 	mounted() {
