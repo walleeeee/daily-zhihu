@@ -20,12 +20,10 @@ import {
 	mapState
 } from 'vuex'
 export default {
-	computed: {
-		...mapState({
-			circle: state => state.circleFlag,
-			article: state => state.article
-		})
-	},
+	computed:mapState({
+		circle: state => state.circleFlag,
+		article: state => state.article
+	}),
 	mounted: function() {
 		this.scroller = this.$el;
 	},

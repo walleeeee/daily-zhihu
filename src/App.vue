@@ -38,13 +38,11 @@
 	} from 'vuex'
 	import api from './api/index'
 	export default {
-		computed: {
-			...mapState({
-				circle: state => state.circleFlag,
-				num: state => state.num,
-				flag: state => state.drawer
-			})
-		},
+		computed: mapState({
+			circle: state => state.circleFlag,
+			num: state => state.num,
+			flag: state => state.drawer
+		}),
 		mounted: function() {
 			let vue = this;
 			api.getTopics().then(function(data) {
