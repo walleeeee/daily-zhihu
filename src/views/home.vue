@@ -86,7 +86,6 @@ export default {
 
 				});
 			} else {
-				console.log(2);
 				api.getNewsByDate(vue.GetDate(vue.count)).then(function(data) {
 					vue.list.push(data.data);
 					vue.loading = false;
@@ -105,12 +104,10 @@ export default {
 			var dd = new Date();
 			dd.setDate(dd.getDate() + Count); //获取AddDayCount天后的日期
 			var y = dd.getFullYear();
-			console.log(dd.getMonth());
 			var m = dd.getMonth() + 1; //获取当前月份的日期
 			m = m >= 10 ? m : "0" + m
 			var d = dd.getDate();
 			d = d >= 10 ? d : "0" + d;
-			console.log(y + "" + m + "" + d);
 			return y + "" + m + "" + d;
 		}
 	}
