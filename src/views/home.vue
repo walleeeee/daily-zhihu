@@ -83,7 +83,6 @@ export default {
 					vue.tops = data.data.top_stories;
 					vue.list.push(data.data);
 					vue.loading = false;
-
 				});
 			} else {
 				api.getNewsByDate(vue.GetDate(vue.count)).then(function(data) {

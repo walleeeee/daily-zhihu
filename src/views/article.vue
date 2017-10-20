@@ -20,7 +20,7 @@ import {
 	mapState
 } from 'vuex'
 export default {
-	computed:mapState({
+	computed: mapState({
 		circle: state => state.circleFlag,
 		article: state => state.article
 	}),
@@ -30,9 +30,9 @@ export default {
 	activated: function() {
 		let vue = this,
 			id = this.$route.query.id;
-		if(this.article.hasOwnProperty(id)){
+		if (this.article.hasOwnProperty(id)) {
 			this.data = this.article[id];
-		}else{
+		} else {
 			api.getNewsById(id).then(function(data) {
 				vue.article[id] = data.data;
 				vue.data = data.data;
@@ -153,7 +153,7 @@ img {
                     left: -.5rem;
                     display: block;
                     height: 100%;
-                    border-left: .1rem solid @yellow;
+                    border-left: 0.1rem solid @yellow;
                     position: absolute;
                 }
             }
@@ -174,12 +174,14 @@ img {
             }
         }
         .content-image {
-        	width:inherit;
+            width: inherit;
             max-width: 100%;
+            margin: 0 auto;
+            display: block;
         }
         .view-more {
             text-align: center;
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
             a {
                 z-index: 1;
                 position: relative;
