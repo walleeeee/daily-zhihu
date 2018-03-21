@@ -58,7 +58,8 @@ export default {
 	}
 }
 </script>
-<style lang="less">@red: #FC4482;
+<style lang="less">
+@red: #FC4482;
 @yellow: #FFD300;
 @blue: #5B7492;
 @gray: #acb9c8;
@@ -114,6 +115,7 @@ img {
             color: @blue;
             position: relative;
             z-index: 1;
+			font-size: .54rem;
         }
         a {
             color: @yellow;
@@ -142,7 +144,7 @@ img {
             }
         }
         .content {
-            font-size: 0.35rem;
+            font-size: 0.4rem;
         }
         .question {
             blockquote {
